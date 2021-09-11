@@ -1,14 +1,49 @@
 {% extends "../../layout/template.html" %}
 
+{% block script %}
+  <script src="/static/js/libs/sortable.js"></script>
+  <script src="/static/js/pages/card/sort.js"></script>
+{% endblock %}
+
+
 {% block main %}
 <div class="flex justify-end py-3">
   <div class="flex justify-between items-center">
-    <div class="btn-primary rounded-sm inline-block">
+    <div class="btn-primary rounded-sm inline-block" id="save-sort">
       <span>提交</span>
     </div>
     <a class="btn-plain rounded-sm inline-block ml-2" href="/dashboard.html">
       <span>取消</span>
     </a>
+  </div>
+</div>
+
+<div class="relative" id="wrap-card-sort">
+  <div class="wrap-dashboard clearfix">
+    {% for item in cards %}
+      {% if item.zoom %}
+        <div class="dashboard-item shrink" data-key="{{ item.key }}">
+      {% else %}
+        <div class="dashboard-item zoom" data-key="{{ item.key }}">
+      {% endif %}
+        <div class="bg-white rounded-sm">
+          <div class="py-3 pl-4 pr-2.5 leading-8 flex justify-between items-center">
+            <div class="flex items-center cursor-move flex-1">
+              {{ iconfont("icon-drag") }}
+              <span class="text-base ml-2">{{ item.title }}</span>
+            </div>
+            <div class="cursor-pointer text-xl j-icon-button">
+              <span class="inline-block button-zoom">
+                {{ iconfont("icon-zoom") }}
+              </span>
+              <span class="inline-block button-shrink">
+                {{ iconfont("icon-shrink") }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
   </div>
 </div>
 {% endblock %}

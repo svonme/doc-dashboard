@@ -11,8 +11,8 @@ const Router = express.Router;
 const router = Router();
 
 const dashboard = function(req, res) {
-  const data = require("../mock/card.json")
   const cardAllData = require("../mock/card/all.json");
+  const data = require("../mock/card.json")
   const db = new DBList([]);
   db.insert(safeGet(data, "list") || []);
 
@@ -41,9 +41,14 @@ router.get('/dashboard.html', dashboard);
 
 
 router.get('/card/sort.html', function(req, res) {
+  const data = require("../mock/card.json")
+  const db = new DBList([]);
+  db.insert(safeGet(data, "list") || []);
+
   res.render("pages/card/sort", {
     title: "卡片布局",
     current: "dashboard",
+    cards: db.clone(),
   });
 });
 
