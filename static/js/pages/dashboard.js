@@ -12,6 +12,19 @@
 
 +function() {
   const addCard = function() {
+
+    const template = Template("card-add-template");
+    const content = template();
+
+    layer.open({
+      type: 1,
+      area: ['860px'],
+      title: "添加卡片",
+      shadeClose: true,
+      content: content,
+    });
+
+
     // 删除添加卡片事件
     $("body").off("click.addCard");
     // 绑定事件
@@ -28,21 +41,7 @@
     });
   }
 
-
-  $(".wrap-detail").on("click", "#on-card-add", function() {
-    const template = Template("card-add-template");
-    const content = template();
-    layer.open({
-      type: 1,
-      area: ['860px'],
-      title: "添加卡片", // 不需要标题
-      shadeClose: true,
-      content: content,
-    });
-
-    addCard();
-  });
-
-  
+  // 添加 卡片
+  $(".wrap-detail").on("click", "#on-card-add", addCard);
   
 }();
