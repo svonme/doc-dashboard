@@ -1,0 +1,25 @@
+<link rel="stylesheet" href="/static/css/libs/app.min.1.css">
+<link rel="stylesheet" href="/static/css/libs/app.min.2.css">
+<link rel="stylesheet" href="/static/css/common/ui.css">
+<link rel="stylesheet" href="/static/css/common/common.css">
+<link rel="stylesheet" href="/static/css/common/base.css">
+<link rel="stylesheet" href="/static/css/common/dashboard.css">
+<link rel="stylesheet" href="/static/css/libs//bootstrap.min.css">
+<!-- icon font -->
+<link rel="stylesheet" href="//at.alicdn.com/t/font_2411457_5vmqkzk0j6h.css">
+<!-- js 插件 -->
+<script src="/static/js/libs/jquery.min.js"></script>
+<script src="/static/js/libs/lodash.min.js"></script>
+
+<script>
+  var Template = function(name) {
+    const text = $("#" + name).html();
+    const imports = { 
+      '$': $, 
+    };
+    const template = _.template(text, {
+      'imports': imports
+    });
+    return template;
+  };
+</script>

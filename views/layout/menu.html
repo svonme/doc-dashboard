@@ -1,0 +1,31 @@
+<div class="wrap-menu-box">
+  <div class="list rounded-sm">
+    {% for item in menuList %}
+      {% if item.line %}
+        {% if current == item.key %}
+          <div class="line current" data-key="{{ item.key }}">
+        {% else %}
+          <div class="line" data-key="{{ item.key }}">
+        {% endif %}
+      {% else %}
+        {% if current == item.key %}
+          <div class="current" data-key="{{ item.key }}">
+        {% else %}
+          <div>
+        {% endif %}
+      {% endif %}
+      
+
+      {% if item.url %}
+        <a class="item" href="{{ item.url }}" data-id="{{ item.id }}">
+          <span>{{ item.name }}</span>
+        </a>
+      {% else %}
+        <a class="block pl-5 item text-sm cursor-pointer" data-id="{{ item.id }}">
+          <span>{{ item.name }}</span>
+        </a>
+      {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

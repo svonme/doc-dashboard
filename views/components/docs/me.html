@@ -1,0 +1,35 @@
+<!-- 我的文档 -->
+<div class="wrap-works">
+  <table class="table table-striped">
+    <colgroup>
+      <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>
+          <span>名称</span>
+        </th>
+        <th style="width: 150px;">
+          <span>更新时间</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in list %}
+        <tr>
+          <td class="ellipsis">
+            <div class="flex items-center">
+              <i class="text-2xl flex">
+                {{ iconfont(item.type) }}
+              </i>
+              <span class="ml-2">{{ item.name || "--" }}</span>
+            </div>
+          </td>
+          <td>
+            <span>{{ item.ctime || "--" }}</span>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

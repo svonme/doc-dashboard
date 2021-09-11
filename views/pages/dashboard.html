@@ -1,0 +1,76 @@
+{% extends "../layout/template.html" %}
+
+{% block script %}
+  <script src="/static/js/pages/dashboard.js"></script>
+  <script src="/static/js/libs/layui/layer/layer.js"></script>
+  <script type="text/html" id="card-add-template">
+    {% include "../components/card/add.html" %}
+  </script>
+{% endblock %}
+
+{% block main %}
+<div class="flex justify-end py-3">
+  <div class="flex justify-between items-center">
+    <div class="cursor-pointer text-sm text-gray-400" id="on-card-add">
+      {{ iconfont("iconkapianjihuo") }}
+      <span>添加卡片</span>
+    </div>
+    <a class="cursor-pointer text-sm ml-5 block" href="/card/sort.html">
+      <i class="text-gray-400">
+        {{ iconfont("iconqiapian") }}
+      </i>
+      <span class="text-gray-400">卡片布局</span>
+    </a>
+  </div>
+</div>
+
+
+<div class="wrap-dashboard clearfix">
+  {% for item in cards %}
+    {% if item.zoom %}
+      <div class="dashboard-item shrink">
+    {% else %}
+      <div class="dashboard-item zoom">
+    {% endif %}
+      <div class="bg-white rounded-sm">
+        <div class="py-3 pl-4 pr-2.5 leading-8 flex justify-between items-center">
+          <span class="text-base">{{ item.title }}</span>
+          <div class="text-base">
+            <span class="inline-block wrap-item-refresh select-none">
+              <i class="cursor-pointer">
+                {{ iconfont("icon-refresh") }}
+              </i>
+            </span>
+            <div class="inline-block ml-2 relative j-card-dropdown">
+              <label class="more-button select-none" for="{{ item.id }}">
+                <i class="cursor-pointer">
+                  {{ iconfont("iconmore1") }}
+                </i>
+              </label>
+              <input class="more-active hidden" type="checkbox" id="{{ item.id }}">
+              <div class="more-menu">
+                <span class="menu-item">删除卡片</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrap-dashboard-content">
+          {% set flag = true %}
+          {% if equals(item.key, 'work/need') %}
+            <!-- 我的待办 -->
+            {% set list = item.list %}
+            {% include "../components/work/need.html" %}
+            {% set flag = false %}
+          {% endif %}
+          {% if flag && equals(item.key, 'docs/me') %}
+            <!-- 我的文档 -->
+            {% set list = item.list %}
+            {% include "../components/docs/me.html" %}
+            {% set flag = false %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

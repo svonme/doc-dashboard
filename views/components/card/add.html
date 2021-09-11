@@ -1,0 +1,54 @@
+<!--上传申请-->
+<div class="rounded-sm wrap-card-main" style="height: 600px;">
+  <div class="clearfix h-full">
+    <!--左侧内容-->
+    <div class="h-full p-3 float-left wrap-card-type" style="width: 135px;">
+      <div>
+        {% set index = 0 %}
+        {% for item in cardAll %}
+          {% if index === 0 %}
+            <div class="card-list active" data-index="{{ index }}">
+          {% else %}
+            <div class="card-list" data-index="{{ index }}">
+          {% endif %}
+            <span class="inline-block">{{ item.name }}</span>
+            <span class="inline-block ml-1">{{ _.size(item.children) }}</span>
+          </div>
+          {% set index = index + 1 %}
+        {% endfor %}
+      </div>
+    </div>
+    <!--右侧内容-->
+    <div class="p-3 h-full wrap-card-box" style="margin-left: 135px;">
+      {% set index = 0 %}
+      {% for item in cardAll %}
+        {% if index === 0 %}
+          <div class="card-list active" data-index="{{ index }}">
+        {% else %}
+          <div class="card-list" data-index="{{ index }}">
+        {% endif %}
+        {% set index = index + 1 %}
+
+          <div class="-ml-3 clearfix">
+            {% for data in item.children %}
+              <div class="card-item w-1/2 float-left">
+                <div class="pl-3">
+                  <label class="w-full wrap-card-data rounded-sm cursor-pointer" data-key="{{ data.key }}">
+                    <span class="block wrap-card-icon">
+                      <img class="inline-block w-full" src="{{ data.icon }}"/>
+                    </span>
+                    <span class="block ml-5">
+                      <span class="block text-sm wrap-card-title">{{ data.name }}</span>
+                      <span class="block text-xs wrap-card-desc mt-2">TAPD产品的功能介绍和使用指引</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+{
+  "name": "cms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "node src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fengqiaogang/dblist": "^0.3.98",
+    "@fengqiaogang/safe-get": "^0.1.1",
+    "@fengqiaogang/safe-set": "^0.1.2",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "swig": "^1.4.2"
+  }
+}

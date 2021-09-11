@@ -1,0 +1,32 @@
+
+.wrap-detail .table {
+  margin: 0;
+  clear: both;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+  word-break: break-all;
+  table-layout: fixed;
+}
+.wrap-detail .table.table-striped td,
+.wrap-detail .table.table-striped th {
+  line-height: 18px;
+  font-size: 14px;
+}
+.wrap-detail .table tr:last-child td{
+  padding-bottom: 8px !important;
+}
+
+.wrap-detail .table.table-striped thead th {
+  background-color: #f3f4f6 !important;
+  color: #b0bac5;
+  font-size: 12px;
+}
+.wrap-detail .table.table-striped tbody tr {
+  background-color: transparent !important;
+}
+
+.wrap-detail .table.table-striped tbody tr:nth-child(even) {
+  background-color: #f8f8f8 !important;
+}

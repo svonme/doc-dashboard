@@ -1,0 +1,317 @@
+
+.iconfont {
+  display: inline-block;
+  font-style: normal;
+  line-height: 0;
+  text-transform: none;
+  vertical-align: -.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  fill: currentColor;
+  overflow: hidden;
+}
+.iconfont svg {
+  width: 1em;
+  height: 1em;
+}
+
+.iconfont:hover {
+  color: #3582fb;
+}
+
+.text-primary {
+  color: #3582fb;
+}
+.bg-primary {
+  background-color: #3582fb;
+}
+
+
+.btn-primary, .btn-plain {
+  font-size: 14px;
+  min-width: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  line-height: 33px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #fff;
+  border: 1px solid #3582fb;
+  background-color: #3582fb;
+}
+
+.btn-plain {
+  color: #3582fb;
+  border: 1px solid #3582fb;
+}
+
+.float-right {
+  float: right;
+}
+.float-left {
+  float: left;
+}
+.float-none {
+  float: none;
+}
+
+
+.ellipsis {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.whitespace-normal {
+  white-space: normal;
+}
+.whitespace-nowrap {
+  white-space: nowrap;
+}
+.whitespace-pre {
+  white-space: pre;
+}
+.whitespace-pre-line {
+  white-space: pre-line;
+}
+.whitespace-pre-wrap {
+  white-space: pre-wrap;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.rounded-sm {
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgb(128 145 165 / 20%);
+}
+.p-3 {
+  padding: 12px;
+}
+.pb-3 {
+  padding-bottom: 12px;
+}
+.pt-3 {
+  padding-top: 12px;
+}
+.py-3 {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.pl-3 {
+  padding-left: 12px;
+}
+.p-4 {
+  padding: 16px;
+}
+.pl-4 {
+  padding-left: 16px;
+}
+.pr-2\.5 {
+  padding-right: 10px;
+}
+.ml-1 {
+  margin-left: 4px;
+}
+.ml-2 {
+  margin-left: 8px;
+}
+.-ml-3 {
+  margin-left: -12px;
+}
+.ml-3 {
+  margin-left: 12px;
+}
+
+.ml-5 {
+  margin-left: 20px;
+}
+
+.mt-2 {
+  margin-top: 8px;
+}
+.mt-3 {
+  margin-top: 12px;
+}
+.mt-4 {
+  margin-top: 16px;
+}
+.mt-5 {
+  margin-top: 20px;
+}
+.mb-5 {
+  margin-bottom: 20px;
+}
+
+.text-xs {
+  font-size: 12px !important;
+}
+.text-sm {
+  font-size: 14px !important;
+}
+.text-base {
+  font-size: 16px !important;
+}
+.text-lg {
+  font-size: 18px !important;
+}
+.text-xl {
+  font-size: 20px !important;
+}
+.text-2xl {
+  font-size: 24px !important;
+}
+
+.align-baseline {
+  vertical-align: baseline;
+}
+.align-top {
+  vertical-align: top;
+}
+.align-middle {
+  vertical-align: middle;
+}
+.align-bottom {
+  vertical-align: bottom;
+}
+.align-text-top {
+  vertical-align: text-top;
+}
+.align-text-bottom {
+  vertical-align: text-bottom;
+}
+
+.leading-8 {
+  line-height: 32px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-move {
+  cursor: move;
+}
+
+.select-none {
+  user-select: none;
+}
+
+.inline-block {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
+.hidden {
+  display: none;
+}
+ 
+.flex {
+  display: flex;
+}
+.inline-flex {
+  display: inline-flex;
+}
+
+.flex-1 {
+  flex: 1;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-end {
+  justify-content: flex-end;
+}
+
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-gray-400 {
+  color: #8c95a8;
+}
+
+
+.w-full {
+  width: 100%;
+}
+.w-fit {
+  width: fit-content;
+}
+.h-full {
+  height: 100%;
+}
+.w-1\/2 {
+  width: 50%;
+}
+
+
+.relative {
+  position: relative;
+}
+
+.empty-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.empty {
+  min-width: 100px;
+  text-align: center;
+  display: block;
+}
+.empty::before {
+  display: block;
+  height: 69px;
+  content: "";
+  background: url(../../images/common/empty.png) no-repeat center;
+}
+.empty::after {
+  content: "暂无内容";
+  display: inline-block;
+  text-align: center;
+  color: #8c95a8;
+  font-size: 12px;
+  padding-top: 10px;
+  padding-right: 17px;
+}
+
+
+@keyframes loading-rotate{
+  to{
+    transform:translate(-50%, -50%) rotate(1turn);
+  }
+}
+
+.loading {
+  position: relative;
+}
+
+.loading::before {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  content: '';
+  width: 32px;
+  height: 32px;
+  transform: translate(-50%, -50%);
+  background: url(../../images/common/loading.svg) no-repeat center / contain;
+  animation: loading-rotate 1s linear infinite;
+}

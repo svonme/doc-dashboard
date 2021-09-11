@@ -1,0 +1,15 @@
+.upload-appy {
+  border-bottom: 1px solid #d1d1d1;
+}
+
+.upload-appy .apply-person {
+  border-left: 1px solid #d1d1d1;
+}
+.upload-appy .apy-process {
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 30px;
+}
+
+.upload-appy .apy-process:last-child {
+  margin-bottom: 0;
+}

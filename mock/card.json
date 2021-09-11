@@ -1,0 +1,41 @@
+{
+  "list": [
+    {
+      "title": "我的待办", 
+      "key": "work/need",
+      "zoom": false
+    }, {
+      "title": "我的已办", 
+      "key": "work/finish",
+      "zoom": false
+    }, {
+      "title": "我的文档", 
+      "key": "docs/me",
+      "zoom": false
+    }, {
+      "title": "我关注的", 
+      "key": "follow",
+      "zoom": false
+    }, {
+      "title": "接的收藏", 
+      "key": "collect",
+      "zoom": false
+    }, {
+      "title": "分发的文档", 
+      "key": "docs/share",
+      "zoom": false
+    }, {
+      "title": "培训文档", 
+      "key": "docs/train",
+      "zoom": false
+    }, {
+      "title": "借阅的文档", 
+      "key": "docs/borrow",
+      "zoom": false
+    }, {
+      "title": "公告通知", 
+      "key": "notice",
+      "zoom": false
+    }
+  ]
+}

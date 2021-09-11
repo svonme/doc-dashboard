@@ -1,0 +1,29 @@
+{
+  "list": [
+    {
+        "name":"全部",
+        "children":[
+            {
+                "key":"docs",
+                "name":"我的文档",
+                "icon":"/static/images/dashboard/add-use-guide-card.png"
+            },
+            {
+                "key":"work",
+                "name":"我的待办",
+                "icon":"/static/images/dashboard/add-use-guide-card.png"
+            }
+        ]
+    },
+    {
+        "name":"工作",
+        "children":[
+            {
+                "key":"work",
+                "name":"我的待办",
+                "icon":"/static/images/dashboard/add-use-guide-card.png"
+            }
+        ]
+    }
+  ]
+}

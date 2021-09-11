@@ -1,0 +1,37 @@
+.wrap-works {
+  display: block;
+}
+
+.wrap-works .wrok-status {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #93c46b;
+  color: #93c46b;
+  line-height: 20px;
+  padding: 2px 10px;
+  border-radius: 10px;
+}
+
+.wrap-works .wrok-grade {
+  display: inline-block;
+  line-height: 20px;
+  height: 20px;
+  padding: 0 10px;
+  border-radius: 2px;
+  color: #fff;
+}
+.wrap-works .wrok-grade.level-1 {
+  background-color: #f85e5e;
+}
+.wrap-works .wrok-grade.level-2 {
+  background-color: #f85e5e;
+}
+.wrap-works .wrok-grade.level-3 {
+  background-color: #93c36b;
+}
+.wrap-works .wrok-grade.level-4 {
+  background-color: #97afd0;
+}
+.wrap-works .wrok-grade.level-5 {
+  background-color: #97afd0;
+}
