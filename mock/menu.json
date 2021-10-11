@@ -1,37 +1,56 @@
 {
   "list": [
     {
-      "name": "我的仪表盘", 
-      "icon": "iconqushi",
-      "line": true, 
-      "url": "/dashboard.html",
+      "name": "我的仪表盘",
+      "icon": "icongongzuotai",
+      "line": true,
+      "url": "/index.html",
       "key": "dashboard"
     }, {
       "name": "我的待办",
-      "icon": "icondaiban",
-      "url": "/work.html",
-      "id": "work"
+      "icon": "iconyiban-moren",
+      "url": "/work/need.html",
+      "key": "work/need"
     }, {
       "name": "我的已办",
-      "icon": "iconweibiaoti9",
-      "id": "work2"
+      "icon": "iconyiban-moren",
+      "url": "/work/finish.html",
+      "key": "work/finish"
     }, {
-      "name": "我的文档", 
-      "icon": "iconfile",
+      "name": "我的文档",
+      "icon": "icondoc-me",
       "url": "/docs/me.html",
       "key": "docs"
     }, {
       "name": "我关注的",
-      "icon": "iconstar",
-      "id": "star"
+      "icon": "iconlist_hetongguanli",
+      "key": "follow",
+      "url": "/follow.html"
     }, {
-      "name": "最近访问",
-      "icon": "iconjilu",
-      "id": "record"
+      "name": "我的收藏",
+      "icon": "iconattention1",
+      "url": "/collect.html",
+      "key": "collect"
     }, {
-      "name": "我的模版",
-      "icon": "iconrecord",
-      "id": "template"
+      "name": "分发的文档",
+      "icon": "iconwj-fswj",
+      "url": "/docs/share.html",
+      "key": "docs/share"
+    }, {
+      "name": "培训文档",
+      "icon": "iconpeixun",
+      "url": "/docs/train.html",
+      "key": "docs/train"
+    }, {
+      "name": "借阅的文档",
+      "icon": "iconwj-shwj",
+      "url": "/docs/borrow.html",
+      "key": "docs/borrow"
+    }, {
+      "name": "公告通知",
+      "icon": "icongonggaoguanli-",
+      "url": "/notice.html",
+      "key": "notice"
     }
   ]
 }

@@ -1,40 +1,38 @@
 <!-- 我的待办 -->
-<link rel="stylesheet" href="/static/css/page/work.css">
 <div class="wrap-works">
-  {% set grades = { '1': '紧急', '2': '高', '3': '中', '4': '底', '5': '无关紧要' } %}
   <table class="table table-striped">
     <colgroup>
       <col>
-      <col style="width: 100px;">
-      <col style="width: 100px;">
-      <col style="width: 150px;">
+      <col style="min-width: 100px; max-width: 200px; width: 25%;">
+      <col style="min-width: 100px; max-width: 200px; width: 25%;">
     </colgroup>
     <thead>
       <tr>
         <th>
-          <span>标题</span>
+          <span class="item-box">事项</span>
         </th>
         <th>
-          <span>状态</span>
+          <span class="item-box">申请人</span>
         </th>
         <th class="text-left">
-          <span>优先级</span>
-        </th>
-        <th>
-          <span>预计结束</span>
+          <span class="item-box">申请时间</span>
         </th>
       </tr>
     </thead>
     <tbody>
       {% for item in list %}
         <tr>
-          <td class="ellipsis">
-            <span>{{ item.fileName || "--" }}</span>
+          <td>
+            <div class="ellipsis">
+              {{ iconfont(item.icon, "align-middle text-2xl") }}
+              <span class="align-middle ml-1">{{ item.fileName || "--" }}</span>
+            </div>
           </td>
           <td>
             <div class="whitespace-nowrap">
               {% if item.status %}
-                <span class="wrok-status">{{ item.status }}</span>
+                <img class="portrait align-middle" src="/static/images/temp/28.png">
+                <span class="align-middle ml-1">{{ item.status }}</span>
               {% else %}
                 <span>--</span>
               {% endif %}
@@ -42,16 +40,7 @@
           </td>
           <td>
             <div class="text-left whitespace-nowrap">
-              {% if item.grade && grades[item.grade] %}
-                <span class="wrok-grade {{ 'level-' + item.grade }}">{{ grades[item.grade] }}</span>
-              {% else %}
-                <span>--</span>
-              {% endif %}
-            </div>
-          </td>
-          <td>
-            <div class="whitespace-nowrap">
-              <span>{{ item.countDown || "--" }}</span>
+              <span>2021-09-11 00:00</span>
             </div>
           </td>
         </tr>

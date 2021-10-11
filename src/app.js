@@ -24,8 +24,9 @@ const iconfont = function(name, className) {
     "pptx": "iconpptx",
     "xlsx": "iconxlsx",
     "txt": "icontxt",
-    "default": "icondefault"
-  } 
+    "default": "icondefault",
+    "folder": "iconfolder"
+  }
   var id = icons[name] || name;
   var arr = ["iconfont"];
     if (className) {

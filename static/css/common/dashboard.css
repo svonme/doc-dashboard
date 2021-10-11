@@ -7,6 +7,7 @@
   padding-left: 12px;
   padding-bottom: 12px;
   color: rgb(24, 43, 80);
+  font-weight: normal;
 }
 .wrap-dashboard .dashboard-item.zoom {
   width: 50%;
@@ -17,16 +18,16 @@
 
 
 .wrap-dashboard .dashboard-item.normal {
-  box-shadow: 0 0 10px rgba(128,145,165,0.2);
+  /*box-shadow: 5px 5px 5px red inset;*/
 }
 
 .wrap-dashboard .wrap-dashboard-content {
-  height: 400px;
+  height: 342px;
   width: 100%;
   max-width: 100% !important;
   min-width: 100% !important;
   overflow: auto;
-  border-top: 1px solid #e8eaee;
+  /*border-top: 1px solid #e8eaee;*/
 }
 
 

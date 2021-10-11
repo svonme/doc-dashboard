@@ -1,0 +1,55 @@
+<!-- 我的待办 -->
+<link rel="stylesheet" href="/static/css/page/work.css">
+<div class="wrap-works">
+    {% set grades = { '1': '紧急', '2': '高', '3': '中', '4': '底', '5': '无关紧要' } %}
+    <table class="table table-striped">
+        <colgroup>
+            <col style="max-width: 40%; width: 40%;">
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+        <tr>
+            <th>
+                <span>事项</span>
+            </th>
+            <th>
+                <span>申请人</span>
+            </th>
+            <th class="text-left">
+                <span>申请时间</span>
+            </th>
+            <th class="text-left">
+                <span>办理时间</span>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for item in list %}
+        <tr>
+            <td class="ellipsis">
+                {{ iconfont("iconicon_4-04", "align-middle text-2xl") }}
+                <span class="align-middle ml-1">{{ item.fileName || "--" }}</span>
+            </td>
+            <td>
+                <div class="whitespace-nowrap">
+                    {% if item.status %}
+                        <img class="portrait align-middle" src="/static/images/temp/28.png">
+                        <span class="align-middle ml-1">{{ item.status }}</span>
+                    {% else %}
+                        <span>--</span>
+                    {% endif %}
+                </div>
+            </td>
+            <td class="text-left">
+                <span>{{ item.ctime }}</span>
+            </td>
+            <td class="text-left">
+                <span>{{ item.handle }}</span>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>

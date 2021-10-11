@@ -2,39 +2,57 @@
   "list": [
     {
       "fileName": "中电万维",
-      "status": "新",
+      "status": "张三",
       "grade": "1",
-      "countDown": ""
+      "countDown": "",
+      "ctime": "2021-09-12 00:00",
+      "handle": "2021-09-12 00:00",
+      "icon": "iconicon_3-08"
     },
     {
       "fileName": "佛山市南海区桃苑福利中心廖工",
-      "status": "新",
+      "status": "李四",
       "grade": "2",
-      "countDown": ""
+      "countDown": "",
+      "ctime": "2021-09-12 00:00",
+      "handle": "2021-09-12 00:00",
+      "icon": "iconicon_4-04"
     },
     {
       "fileName": "联华 郑先生",
-      "status": "新",
+      "status": "王武",
       "grade": "3",
-      "countDown": ""
+      "countDown": "",
+      "ctime": "2021-09-12 00:00",
+      "handle": "2021-09-12 00:00",
+      "icon": "iconicon_1-11"
     },
     {
       "fileName": "测试1",
       "status": "",
       "grade": "4",
-      "countDown": "2021-10-10"
+      "countDown": "2021-10-10",
+      "ctime": "2021-09-12 00:00",
+      "handle": "2021-09-12 00:00",
+      "icon": "iconicon_1-31"
     },
     {
       "fileName": "测试2",
       "status": "新",
       "grade": "5",
-      "countDown": ""
+      "countDown": "",
+      "ctime": "2021-09-12 00:00",
+      "handle": "2021-09-12 00:00",
+      "icon": "iconicon_1-31"
     },
     {
       "fileName": "测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3测试3",
       "status": "新",
       "grade": "5",
-      "countDown": ""
+      "countDown": "",
+      "ctime": "2021-09-12 00:00",
+      "handle": "2021-09-12 00:00",
+      "icon": "iconicon_1-31 00:00"
     }
   ]
 }

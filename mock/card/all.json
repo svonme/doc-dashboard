@@ -4,14 +4,49 @@
         "name":"全部",
         "children":[
             {
-                "key":"docs",
-                "name":"我的文档",
+                "key":"1",
+                "name":"我的待办",
                 "icon":"/static/images/dashboard/add-use-guide-card.png"
             },
             {
-                "key":"work",
-                "name":"我的待办",
+                "key":"2",
+                "name":"我的已办",
                 "icon":"/static/images/dashboard/add-use-guide-card.png"
+            },
+            {
+              "key":"3",
+              "name":"我的文档",
+              "icon":"/static/images/dashboard/add-use-guide-card.png"
+            },
+            {
+              "key":"4",
+              "name":"我关注的",
+              "icon":"/static/images/dashboard/add-use-guide-card.png"
+            },
+            {
+              "key":"5",
+              "name":"我的收藏",
+              "icon":"/static/images/dashboard/add-use-guide-card.png"
+            },
+            {
+              "key":"6",
+              "name":"分发的文档",
+              "icon":"/static/images/dashboard/add-use-guide-card.png"
+            },
+            {
+              "key":"7",
+              "name":"培训文档",
+              "icon":"/static/images/dashboard/add-use-guide-card.png"
+            },
+            {
+              "key":"8",
+              "name":"借阅的文档",
+              "icon":"/static/images/dashboard/add-use-guide-card.png"
+            },
+            {
+              "key":"9",
+              "name":"公告通知",
+              "icon":"/static/images/dashboard/add-use-guide-card.png"
             }
         ]
     },

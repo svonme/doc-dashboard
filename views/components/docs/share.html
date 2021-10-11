@@ -1,19 +1,24 @@
-<!-- 我的文档 -->
+<!-- 分发的文档 -->
+<link rel="stylesheet" href="/static/css/page/work.css">
 <div class="wrap-works">
   <table class="table table-striped">
     <colgroup>
+      <col style="max-width: 40%; width: 40%;">
       <col>
       <col>
     </colgroup>
     <thead>
-      <tr>
-        <th>
-          <span>名称</span>
-        </th>
-        <th style="width: 150px;">
-          <span>更新时间</span>
-        </th>
-      </tr>
+    <tr>
+      <th>
+        <span>名称</span>
+      </th>
+      <th>
+        <span>发送人</span>
+      </th>
+      <th>
+        <span>失效日期</span>
+      </th>
+    </tr>
     </thead>
     <tbody>
       {% for item in list %}
@@ -27,7 +32,11 @@
             </div>
           </td>
           <td>
-            <span>{{ item.ctime || "--" }}</span>
+            <img class="portrait align-middle" src="/static/images/temp/28.png">
+            <span class="align-middle ml-1">张三</span>
+          </td>
+          <td>
+            <span>2019-09-10</span>
           </td>
         </tr>
       {% endfor %}

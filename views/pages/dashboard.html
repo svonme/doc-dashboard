@@ -32,22 +32,22 @@
 <div class="wrap-dashboard clearfix">
   {% for item in cards %}
     {% if item.zoom %}
-      <div class="dashboard-item shrink">
+      <div class="dashboard-item shrink normal">
     {% else %}
-      <div class="dashboard-item zoom">
+      <div class="dashboard-item zoom normal">
     {% endif %}
       <div class="bg-white rounded-sm">
         <div class="py-3 pl-4 pr-2.5 leading-8 flex justify-between items-center">
           <span class="text-base">{{ item.title }}</span>
           <div class="text-base">
             <span class="inline-block wrap-item-refresh select-none">
-              <i class="cursor-pointer">
+              <i class="cursor-pointer text-gray-400">
                 {{ iconfont("icon-refresh") }}
               </i>
             </span>
             <div class="inline-block ml-2 relative j-card-dropdown">
               <label class="more-button select-none" for="{{ item.id }}">
-                <i class="cursor-pointer">
+                <i class="cursor-pointer text-gray-400">
                   {{ iconfont("iconmore1") }}
                 </i>
               </label>
@@ -62,14 +62,66 @@
           {% set flag = true %}
           {% if equals(item.key, 'work/need') %}
             <!-- 我的待办 -->
-            {% set list = item.list %}
+            {% set list = item.workNeedList %}
             {% include "../components/work/need.html" %}
             {% set flag = false %}
           {% endif %}
+
+          {% if flag && equals(item.key, 'work/finish') %}
+            <!-- 我的已办 -->
+            {% set list = item.finishList %}
+            {% include "../components/work/finish.html" %}
+            {% set flag = false %}
+          {% endif %}
+
           {% if flag && equals(item.key, 'docs/me') %}
             <!-- 我的文档 -->
-            {% set list = item.list %}
+            {% set list = item.docsMeList %}
             {% include "../components/docs/me.html" %}
+            {% set flag = false %}
+          {% endif %}
+
+          {% if flag && equals(item.key, 'follow') %}
+            <!-- 我关注的 -->
+            {% set list = item.followList %}
+            {% include "../components/follow.html" %}
+            {% set flag = false %}
+          {% endif %}
+
+          {% if flag && equals(item.key, 'collect') %}
+            <!-- 我的收藏 -->
+            {% set list = item.collectList %}
+            {% include "../components/collect.html" %}
+            {% set flag = false %}
+          {% endif %}
+
+          {% if flag && equals(item.key, 'docs/share') %}
+            <!-- 分发的文档 -->
+            {% set list = item.docsShareList %}
+            {% include "../components/docs/share.html" %}
+            {% set flag = false %}
+          {% endif %}
+
+          {% if flag && equals(item.key, 'docs/train') %}
+            <!-- 培训文档 -->
+            {% set list = item.docsTrainList %}
+            {% include "../components/docs/train.html" %}
+            {% set flag = false %}
+          {% endif %}
+
+          {% if flag && equals(item.key, 'docs/borrow') %}
+            <!-- 借阅的文档 -->
+            {% set list = item.docsBorrowList %}
+            {% set operation = false %}
+            {% include "../components/docs/borrow.html" %}
+            {% set flag = false %}
+          {% endif %}
+
+          {% if flag && equals(item.key, 'notice') %}
+            <!-- 公告通知 -->
+            {% set list = item.noticeList %}
+            {% set operation = false %}
+            {% include "../components/notice.html" %}
             {% set flag = false %}
           {% endif %}
         </div>

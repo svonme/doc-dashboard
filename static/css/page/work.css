@@ -1,5 +1,8 @@
 .wrap-works {
   display: block;
+  padding-bottom: 22px;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .wrap-works .wrok-status {
@@ -19,19 +22,14 @@
   padding: 0 10px;
   border-radius: 2px;
   color: #fff;
+  cursor: pointer;
 }
 .wrap-works .wrok-grade.level-1 {
   background-color: #f85e5e;
 }
 .wrap-works .wrok-grade.level-2 {
-  background-color: #f85e5e;
+  background-color: #00bcd4;
 }
 .wrap-works .wrok-grade.level-3 {
-  background-color: #93c36b;
-}
-.wrap-works .wrok-grade.level-4 {
-  background-color: #97afd0;
-}
-.wrap-works .wrok-grade.level-5 {
-  background-color: #97afd0;
+  background-color: #ccc;
 }

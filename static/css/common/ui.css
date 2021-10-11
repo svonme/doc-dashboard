@@ -60,11 +60,13 @@
 
 
 .ellipsis {
-  display: inline-block;
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.ellipsis:not(td) {
+  display: inline-block;
 }
 
 .whitespace-normal {
@@ -121,6 +123,9 @@
 }
 .ml-2 {
   margin-left: 8px;
+}
+.ml-2\.5 {
+  margin-left: 10px;
 }
 .-ml-3 {
   margin-left: -12px;
@@ -211,7 +216,7 @@
 .hidden {
   display: none;
 }
- 
+
 .flex {
   display: flex;
 }

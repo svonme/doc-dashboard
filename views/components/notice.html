@@ -1,0 +1,49 @@
+<!-- 我关注的 -->
+<link rel="stylesheet" href="/static/css/page/work.css">
+<div class="wrap-works">
+  <table class="table table-striped">
+    <colgroup>
+      <col style="max-width: 40%; width: 40%;">
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th>
+          <span>事项</span>
+        </th>
+        <th>
+          <span>发送人</span>
+        </th>
+        <th>
+          <span>发送时间</span>
+        </th>
+        <th>
+          <span>状态</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in list %}
+        <tr>
+          <td class="ellipsis">
+            {{ iconfont("iconicon_3-08", "align-middle text-2xl") }}
+            <span class="align-middle ml-1">通知内容通知内容通知内容....</span>
+          </td>
+          <td>
+            <img class="portrait align-middle" src="/static/images/temp/28.png">
+            <span class="align-middle ml-1">张三</span>
+          </td>
+          <td>
+            <span>2021-09-11 00:00</span>
+          </td>
+          <td>
+            <span class="wrok-grade level-1">未读</span>
+<!--            <span class="wrok-grade level-3">已读</span>-->
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

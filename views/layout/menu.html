@@ -14,15 +14,27 @@
           <div>
         {% endif %}
       {% endif %}
-      
+
 
       {% if item.url %}
         <a class="item" href="{{ item.url }}" data-id="{{ item.id }}">
-          <span>{{ item.name }}</span>
+          <span class="flex items-center">
+            {% if item.icon %}
+              {{ iconfont(item.icon, 'text-base text-gray-400') }}
+            {% endif %}
+            <span class="ml-2.5">{{ item.name }}</span>
+          </span>
+          <span class="total">12</span>
         </a>
       {% else %}
         <a class="block pl-5 item text-sm cursor-pointer" data-id="{{ item.id }}">
-          <span>{{ item.name }}</span>
+          <span class="flex items-center">
+            {% if item.icon %}
+              {{ iconfont(item.icon, 'text-base text-gray-400') }}
+            {% endif %}
+            <span class="ml-2.5">{{ item.name }}</span>
+          </span>
+          <span class="total">11</span>
         </a>
       {% endif %}
       </div>

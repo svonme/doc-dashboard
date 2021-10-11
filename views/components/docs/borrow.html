@@ -1,0 +1,50 @@
+<!-- 分发的文档 -->
+<link rel="stylesheet" href="/static/css/page/work.css">
+<div class="wrap-works">
+    <table class="table table-striped">
+        <colgroup>
+            <col>
+            <col style="width: 150px;">
+            {% if operation %}
+                <col>
+            {% endif %}
+        </colgroup>
+        <thead>
+        <tr>
+            <th>
+                <span>名称</span>
+            </th>
+            <th>
+                <span>失效日期</span>
+            </th>
+            {% if operation %}
+                <th>
+                    <span>操作</span>
+                </th>
+            {% endif %}
+        </tr>
+        </thead>
+        <tbody>
+            {% for item in list %}
+                <tr>
+                    <td class="ellipsis">
+                        <div class="flex items-center">
+                            <i class="text-2xl flex">
+                                {{ iconfont(item.type) }}
+                            </i>
+                            <span class="ml-2">{{ item.name || "--" }}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <span>2021-09-11 00:00</span>
+                    </td>
+                    {% if operation %}
+                        <td>
+                            <span class="wrok-grade level-2">下载</span>
+                        </td>
+                    {% endif %}
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

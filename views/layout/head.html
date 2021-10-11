@@ -4,9 +4,10 @@
 <link rel="stylesheet" href="/static/css/common/common.css">
 <link rel="stylesheet" href="/static/css/common/base.css">
 <link rel="stylesheet" href="/static/css/common/dashboard.css">
-<link rel="stylesheet" href="/static/css/libs//bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/libs/bootstrap.min.css">
+<link rel="stylesheet" href="/static/css/page/work.css">
 <!-- iconfont -->
-<script src="/static/js/libs/iconfont/font_2411457_5vmqkzk0j6h.js"></script>
+<script src="/static/js/libs/iconfont/font_2411457_kdesl05ad3.js"></script>
 <!-- js 插件 -->
 <script src="/static/js/libs/jquery.min.js"></script>
 <script src="/static/js/libs/lodash.min.js"></script>
@@ -14,8 +15,8 @@
 <script>
   var Template = function(name) {
     const text = $("#" + name).html();
-    const imports = { 
-      '$': $, 
+    const imports = {
+      '$': $,
     };
     const template = _.template(text, {
       'imports': imports
